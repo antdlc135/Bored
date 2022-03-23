@@ -1,6 +1,6 @@
 # Bored
 
-Didactic code useful for my first experiments with Angular 13, Typescript, reactive programming, HttpClientModule and rxjs.
+Didactic code useful for my first experiments with Angular 13, Typescript, HttpClientModule, reactive programming and rxjs.
 
 Setup:
 
