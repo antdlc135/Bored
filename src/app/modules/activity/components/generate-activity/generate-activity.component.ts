@@ -25,7 +25,6 @@ export class GenerateActivityComponent implements OnInit {
     this.activityService.fetchActivity().subscribe((act) => {
       this.activity = act;
       this.disabled = false;
-      console.log(act);
     });
   }
 
