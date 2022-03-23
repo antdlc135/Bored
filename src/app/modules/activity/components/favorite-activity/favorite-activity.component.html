@@ -25,11 +25,11 @@
         <td>{{ activity.key }}</td>
         <td>
           {{
-            activity.accessibility < 0.3
+            activity.accessibility <= 0.3
               ? "Bassa"
               : activity.accessibility < 0.5 && activity.accessibility > 0.3
               ? "Media"
-              : activity.accessibility > 0.5
+              : activity.accessibility >= 0.5
               ? "Alta"
               : ""
           }}
