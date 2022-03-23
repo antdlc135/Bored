@@ -21,6 +21,7 @@ export class FavoriteActivityComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {}
 
   deleteActivity(i: number) {
+    localStorage.removeItem(this.favActivity[i].activity);
     this.favActivity.splice(i, 1);
   }
 }
