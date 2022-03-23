@@ -1,0 +1,17 @@
+<div class="cont d-flex justify-content-center">
+  <div class="content d-flex flex-column align-items-center">
+    <nav class="d-flex justify-content-center">
+      <bored-navbar></bored-navbar>
+    </nav>
+    <div class="p-5">
+      <bored-generate-activity
+        (sendActivity)="sendFavorite($event)"
+      ></bored-generate-activity>
+    </div>
+    <div class="p-5">
+      <bored-favorite-activity
+        [favActivity$]="favActivity"
+      ></bored-favorite-activity>
+    </div>
+  </div>
+</div>

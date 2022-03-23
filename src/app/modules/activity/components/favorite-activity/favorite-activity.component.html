@@ -1,0 +1,46 @@
+<div class="cont d-flex flex-column align-items-center">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Activity</th>
+        <th scope="col">Type</th>
+        <th scope="col">Participants</th>
+        <th scope="col">Price</th>
+        <th scope="col">Link</th>
+        <th scope="col">Key</th>
+        <th scope="col">Accessibility</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let activity of favActivity; let i = index">
+        <th scope="row">
+          {{ i + 1 }}
+        </th>
+        <td>{{ activity.activity }}</td>
+        <td>{{ activity.type }}</td>
+        <td>{{ activity.participants }}</td>
+        <td>{{ activity.price }}</td>
+        <td>{{ activity.link === "" ? "Nessun link" : activity.link }}</td>
+        <td>{{ activity.key }}</td>
+        <td>
+          {{
+            activity.accessibility < 0.3
+              ? "Bassa"
+              : activity.accessibility < 0.5 && activity.accessibility > 0.3
+              ? "Media"
+              : activity.accessibility > 0.5
+              ? "Alta"
+              : ""
+          }}
+        </td>
+        <td>
+          <button (click)="deleteActivity(i)" class="btn btn-danger">
+            Elimina
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="favActivity.length === 0">Nessun preferito</div>
+</div>

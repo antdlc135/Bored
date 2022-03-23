@@ -1,0 +1,48 @@
+<div class="d-flex flex-column align-items-center">
+  <button (click)="fetchActivity()" class="btn btn-primary m-4">
+    Genera Attività
+  </button>
+
+  <div class="d-flex flex-column align-items-center" *ngIf="activity">
+    <span
+      ><h4 class="text-danger">{{ activity.activity }}</h4></span
+    >
+    <table class="table p-5">
+      <tbody>
+        <tr>
+          <td>
+            <h6>Tipo</h6>
+            {{ activity.type }}
+          </td>
+          <td>
+            <h6>Partecipanti</h6>
+            {{ activity.participants }}
+          </td>
+          <td>
+            <h6>Prezzo</h6>
+            {{ activity.price }}
+          </td>
+          <td>
+            <h6>Link</h6>
+            {{ activity.link }}
+          </td>
+          <td>
+            <h6>Key</h6>
+            {{ activity.key }}
+          </td>
+          <td>
+            <h6>Difficoltà</h6>
+            {{ activity.accessibility }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button
+    [disabled]="disabled"
+    (click)="saveActivity()"
+    class="btn btn-success m-4"
+  >
+    Salva nei preferiti
+  </button>
+</div>
